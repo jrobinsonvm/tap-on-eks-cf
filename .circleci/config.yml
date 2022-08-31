@@ -21,7 +21,7 @@ jobs:
             aws cloudformation create-stack \
             --template-body file://aws-tap-entrypoint-new-vpc.template.yaml \
             --stack-name taponeks \
-            --parameters ParameterKey=RemoteAccessCidr,ParameterValue=0.0.0.0/0 ParameterKey=KeyPairName,ParameterValue=my-key  ParameterKey=EKSClusterName,ParameterValue=taponeks01   ParameterKey=TAPDomainName,ParameterValue=tap.buildcloudnativeapps.com      ParameterKey=TanzuNetUsername,ParameterValue=robinson039@gmail.com      ParameterKey=AvailabilityZones,ParameterValue="[ "us-east-2a", "us-east-2b", "us-east-2c"]"  ParameterKey=TanzuNetApiToken,ParameterValue=$TanzuNetApiToken    ParameterKey=TanzuNetPassword,ParameterValue=$TanzuNetPassword    
+            --parameters ParameterKey=RemoteAccessCidr,ParameterValue=0.0.0.0/0 ParameterKey=KeyPairName,ParameterValue=my-key  ParameterKey=EKSClusterName,ParameterValue=taponeks01   ParameterKey=TAPDomainName,ParameterValue=tap.buildcloudnativeapps.com      ParameterKey=TanzuNetUsername,ParameterValue=robinson039@gmail.com      ParameterKey=AvailabilityZones,ParameterValue=us-east-2a  ParameterKey=TanzuNetApiToken,ParameterValue=$TanzuNetApiToken    ParameterKey=TanzuNetPassword,ParameterValue=$TanzuNetPassword    
  
 workflows:
   example-workflow:
