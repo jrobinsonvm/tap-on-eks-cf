@@ -176,8 +176,8 @@ Parameters:
     Description: >-
       Number of Availability Zones to use in the VPC. This must match the value
       entered for the AvailabilityZones parameter.
-    AllowedValues: [2, 3]
-    Default: 3
+    AllowedValues: [1, 2, 3]
+    Default: 1
   AvailabilityZones:
     Type: List<AWS::EC2::AvailabilityZone::Name>
     Description: >-
