@@ -179,7 +179,7 @@ Parameters:
     AllowedValues: [2, 3]
     Default: 3
   AvailabilityZones:
-    Type: List<AWS::EC2::AvailabilityZone::Name>
+    Type: String
     Description: >-
       List of Availability Zones to use for the subnets in the VPC. Three
       Availability Zones are used for this deployment.
@@ -612,7 +612,7 @@ Resources:
         - S3Bucket: !If [UsingDefaultBucket, !Sub '${QSS3BucketName}-${AWS::Region}', !Ref QSS3BucketName]
           S3Region: !If [UsingDefaultBucket, !Ref AWS::Region, !Ref QSS3BucketRegion]
       Parameters:
-        AvailabilityZones: !Join [ ',', !Ref 'AvailabilityZones' ]
+        AvailabilityZones: !Ref 'AvailabilityZones' 
         NumberOfAZs: !Ref NumberOfAZs
         CreateNATGateways: true
         PrivateSubnet1ACIDR: !Ref PrivateSubnet1CIDR
