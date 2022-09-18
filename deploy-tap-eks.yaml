@@ -83,9 +83,9 @@ Metadata:
       AcceptCEIP:
         default: Have you read and accept the VMware CEIP policy?
       AvailabilityZones:
-        default: Availability Zones
+        default: us-east-2b
       NumberOfAZs:
-        default: Number of Availability Zones
+        default: 1
       KeyPairName:
         default: EC2 key pair name
       VPCCIDR:
