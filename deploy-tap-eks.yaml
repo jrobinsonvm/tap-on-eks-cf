@@ -83,7 +83,7 @@ Metadata:
       AcceptCEIP:
         default: Have you read and accept the VMware CEIP policy?
       AvailabilityZones:
-        default: us-east-2b
+        default: [us-east-2b, us-east-2c]
       NumberOfAZs:
         default: 1
       KeyPairName:
@@ -177,7 +177,7 @@ Parameters:
       Number of Availability Zones to use in the VPC. This must match the value
       entered for the AvailabilityZones parameter.
     AllowedValues: [1, 2, 3]
-    Default: 1
+    Default: 2
   AvailabilityZones:
     Type: List<AWS::EC2::AvailabilityZone::Name>
     Description: >-
