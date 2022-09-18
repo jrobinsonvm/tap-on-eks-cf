@@ -183,6 +183,7 @@ Parameters:
     Description: >-
       List of Availability Zones to use for the subnets in the VPC. Three
       Availability Zones are used for this deployment.
+    Default: ["us-east-2a", "us-east-2b", "us-east-2c"]
   VPCCIDR:
     Type: String
     Description: CIDR block for the VPC.
